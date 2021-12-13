@@ -4,9 +4,7 @@ from sqlite3.dbapi2 import connect
 with sqlite3.connect('data.db') as connect:
     cursor = connect.cursor()
 
-    sql = ('select id, title, body from topics')
-    cursor.execute(sql)
-    rows = cursor.fetchall()
-    
-    
+    id = input('아이디를 입력해주세요: ')
+    sql = ('delete from topics where id = ?')    
+    cursor.execute(sql, (id))
     
