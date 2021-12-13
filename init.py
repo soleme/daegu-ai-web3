@@ -1,5 +1,5 @@
 import sqlite3
-from sqlite3.dbapi2 import connect
+from sqlite3 import connect
 connect = sqlite3.connect('data.db')
 cursor = connect.cursor()
 cursor.execute('''
